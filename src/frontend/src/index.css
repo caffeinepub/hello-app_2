@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Plus Jakarta Sans */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bricolage Grotesque */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Page bg: very light cool gray #F6F7FB → oklch(0.971 0.006 258) */
+    --background: 0.971 0.006 258;
+    /* Primary text near-black charcoal #111827 → oklch(0.155 0.018 264) */
+    --foreground: 0.155 0.018 264;
+    /* Card white #FFFFFF */
+    --card: 1 0 0;
+    --card-foreground: 0.155 0.018 264;
+    --popover: 1 0 0;
+    --popover-foreground: 0.155 0.018 264;
+    /* Primary accent blue #2563EB → oklch(0.502 0.243 261) */
+    --primary: 0.502 0.243 261;
+    --primary-foreground: 1 0 0;
+    /* Secondary ghost button: light gray */
+    --secondary: 0.96 0.006 258;
+    --secondary-foreground: 0.155 0.018 264;
+    /* Muted / secondary text #6B7280 → oklch(0.556 0.013 258) */
+    --muted: 0.96 0.006 258;
+    --muted-foreground: 0.556 0.013 258;
+    /* Accent: pale blue tint #EFF6FF → oklch(0.968 0.028 261) */
+    --accent: 0.968 0.028 261;
+    --accent-foreground: 0.502 0.243 261;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    /* Border #E5E7EB → oklch(0.922 0.007 258) */
+    --border: 0.922 0.007 258;
+    --input: 0.922 0.007 258;
+    --ring: 0.502 0.243 261;
+    --radius: 0.75rem;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.155 0.018 264;
+    --sidebar-primary: 0.502 0.243 261;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.968 0.028 261;
+    --sidebar-accent-foreground: 0.502 0.243 261;
+    --sidebar-border: 0.922 0.007 258;
+    --sidebar-ring: 0.502 0.243 261;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
